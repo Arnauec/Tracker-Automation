@@ -1,0 +1,37 @@
+# MyAnonaMouse credentials and settings
+MYANONA_USER=
+MYANONA_USER_ID=
+MYANONA_PW=
+
+# LAT-TEAM credentials and settings
+LAT_USER=
+LAT_PW=
+
+# DIV-TEAM credentials and settings
+DIV_USER=
+DIV_USER_ID=
+DIV_PW=
+
+# HDOlimpo credentials and settings
+HDO_USER=
+HDO_PW=
+
+# Email settings
+FROM_EMAIL=
+TO_EMAIL=
+EMAIL_PW=
+EMAIL_HOST=
+EMAIL_PORT=
+
+# Transmission settings
+TRANS_IP=
+TRANS_USER=
+TRANS_PW=
+
+# Prowlarr settings
+PROWLARR_IP=
+PROWLARR_API_KEY=
+DIVTEAM_ID=
+HDOLIMPO_ID=
+LATTEAM_ID=
+MYANONA_ID=
