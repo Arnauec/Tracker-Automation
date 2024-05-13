@@ -1,3 +1,5 @@
+import sys
+sys.path.append('/app/common')
 import json
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -9,7 +11,7 @@ from time import sleep
 from common.email_utils import send_email
 
 # Set up logging
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(filename="../app.log", level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Load the .env file
 load_dotenv()

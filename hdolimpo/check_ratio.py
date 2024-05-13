@@ -1,3 +1,5 @@
+import sys
+sys.path.append('/app/common')
 import json
 import random
 import requests
