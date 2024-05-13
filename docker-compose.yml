@@ -4,8 +4,8 @@ services:
     volumes:
       - ./torrents:/app/torrents
     environment:
-      #- CRON_SCHEDULE=0 0 */7 * *
-      - CRON_SCHEDULE=*/5 * * * *
+      - CRON_SCHEDULE=0 0 */7 * *
+      #- CRON_SCHEDULE=*/5 * * * * # Shorter cron to test for debugging
       - PUID=1028
       - PGID=100
       - TZ=Europe/Madrid
