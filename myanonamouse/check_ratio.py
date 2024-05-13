@@ -52,8 +52,8 @@ ratio = int(driver.find_element(By.XPATH, "//td[.='Share ratio']/following-sibli
 while ratio < 2000:
     logging.info("The ratio is less than 4")
     driver.get(f'https://www.myanonamouse.net/store.php')
-    bonus_points_text = driver.find_element(By.XPATH, "//section//article[1]//div[1]//h4").text
-    bonus_points = int(bonus_points_text.split('(')[1].split(')')[0].split(" ")[1].split('.')[0])
+    bonus_points_text = driver.find_element(By.XPATH, '//*[@id="currentBonusPoints"]').text
+    bonus_points = int(bonus_points_text.split('.')[0])
     if bonus_points < 500:
             logging.error("There are not enough bonus points to make a purchase.")
             if is_indexer_enabled: disable_indexer(myanona_id)
