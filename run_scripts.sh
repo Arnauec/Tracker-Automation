@@ -1,4 +1,7 @@
 #!/bin/sh
+
+export PYTHONPATH=/app
+
 echo "$(date) - Script started" >> /app/app.log
 /usr/bin/python3 /app/hdolimpo/login.py
 /usr/bin/python3 /app/hdolimpo/check_ratio.py

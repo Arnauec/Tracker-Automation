@@ -1,5 +1,3 @@
-import sys
-sys.path.append('/app/common')
 import json
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
