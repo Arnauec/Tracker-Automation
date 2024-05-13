@@ -6,4 +6,7 @@ services:
     environment:
       #- CRON_SCHEDULE=0 0 */7 * *
       - CRON_SCHEDULE=*/5 * * * *
+      - PUID=1028
+      - PGID=100
+      - TZ=Europe/Madrid
     command: bash -c "echo "$$CRON_SCHEDULE /app/run_scripts.sh >> /etc/crontabs/root && crond -l 2 -f"

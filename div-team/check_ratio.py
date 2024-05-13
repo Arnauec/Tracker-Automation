@@ -19,7 +19,7 @@ div_id  = os.getenv('DIVTEAM_ID')
 div_user_id = os.getenv('DIV_USER_ID')
 div_user  = os.getenv('DIV_USER')
 # Set up logging
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(filename="../app.log", level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Set up Chrome options
 options = Options()

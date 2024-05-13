@@ -13,7 +13,7 @@ from datetime import datetime, timedelta
 import transmission_rpc
 
 # Set up logging
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(filename="../app.log", level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Load the .env file
 load_dotenv()

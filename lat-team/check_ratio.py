@@ -18,7 +18,7 @@ load_dotenv()
 latteam_id  = os.getenv('LATTEAM_ID')
 latteam_user  = os.getenv('LAT_USER')
 # Set up logging
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(filename="../app.log", level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Set up Chrome options
 options = Options()

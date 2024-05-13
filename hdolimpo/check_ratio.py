@@ -19,7 +19,7 @@ hdolimpo_id  = os.getenv('HDOLIMPO_ID')
 hdolimpo_user = os.getenv('HDOLIMPO_USER')
 
 # Set up logging
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(filename="../app.log", level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Set up Chrome options
 options = Options()
