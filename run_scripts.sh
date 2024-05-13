@@ -8,3 +8,4 @@
 /usr/local/bin/python /app/div-team/check_ratio.py
 /usr/local/bin/python /app/lat-team/login.py
 /usr/local/bin/python /app/lat-team/check_ratio.py
+/usr/local/bin/python /app/bye.py
