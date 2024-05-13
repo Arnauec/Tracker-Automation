@@ -18,10 +18,10 @@ load_dotenv()
 # Now you can access the variables
 username = os.getenv('MYANONA_USER')
 password = os.getenv('MYANONA_PW')
+myanon_user_id = os.getenv('MYANONA_USER_ID')
 
 # Set up Chrome options
 options = Options()
-options.add_argument('--headless')
 options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3")
 
 # Set up WebDriver
@@ -41,7 +41,7 @@ submit_button = driver.find_element(By.XPATH, "//input[@value='Log in!']")
 submit_button.click()
 
 # Confirm login was successful
-driver.get('https://www.myanonamouse.net/u/228480') # Replace with your user ID
+driver.get(f'https://www.myanonamouse.net/u/{myanon_user_id}')
 user_name = driver.find_element(By.XPATH, '//*[@id="userMenu"]').text
 
 # Check if the text contains the desired words
