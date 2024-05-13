@@ -40,7 +40,8 @@ submit_button = driver.find_element(By.ID, "login-button")
 submit_button.click()
 
 # Confirm login was successful
-html_source = driver.get(f'https://hd-olimpo.club/users/{username}') # Replace with your user ID
+driver.get(f'https://hd-olimpo.club/users/{username}')
+html_source = driver.page_source
 
 # Check if the text contains the desired words
 if username in html_source:
