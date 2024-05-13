@@ -9,4 +9,4 @@ services:
       - PUID=1028
       - PGID=100
       - TZ=Europe/Madrid
-    command: bash -c "echo "$$CRON_SCHEDULE /app/run_scripts.sh >> /etc/crontabs/root && crond -l 2 -f"
+    command: bash -c 'echo "$$CRON_SCHEDULE /app/run_scripts.sh" | crontab - && cron && tail -f /dev/null'
