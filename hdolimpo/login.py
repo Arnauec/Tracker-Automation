@@ -40,11 +40,10 @@ submit_button = driver.find_element(By.ID, "login-button")
 submit_button.click()
 
 # Confirm login was successful
-driver.get(f'https://hd-olimpo.club/users/{username}') # Replace with your user ID
-user_name = driver.find_element(By.XPATH, '/html/body/div[1]/div[3]/section/article/div[1]/div[1]/div[3]/div/div/div[2]/h2').text
+html_source = driver.get(f'https://hd-olimpo.club/users/{username}') # Replace with your user ID
 
 # Check if the text contains the desired words
-if username in user_name:
+if username in html_source:
     logging.info(f"The text '{username}' is present in the userMenu element. Login Successful!")
 else:
     logging.error(f"The text '{username}' is not present in the userMenu element. There was a problem during Login.")
