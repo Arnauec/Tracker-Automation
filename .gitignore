@@ -1,0 +1,8 @@
+.env
+env
+torrents/*
+common/__pycache__/*
+myanona-cookies.txt
+lat-team-cookies.txt
+hdolimpo-cookies.txt
+div-team-cookies.txt

@@ -1,0 +1,9 @@
+services:
+  tracker-automation:
+    build: .
+    volumes:
+      - ./torrents:/app/torrents
+    environment:
+      #- CRON_SCHEDULE=0 0 */7 * *
+      - CRON_SCHEDULE=*/5 * * * *
+    command: bash -c "echo "$$CRON_SCHEDULE /app/run_scripts.sh >> /etc/crontabs/root && crond -l 2 -f"
