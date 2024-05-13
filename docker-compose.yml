@@ -1,5 +1,5 @@
 services:
-  tracker-automation:
+  main:
     build: .
     volumes:
       - ./torrents:/app/torrents
