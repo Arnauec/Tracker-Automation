@@ -15,7 +15,7 @@ load_dotenv()
 
 # Now you can access the variables
 hdolimpo_id  = os.getenv('HDOLIMPO_ID')
-hdolimpo_user = os.getenv('HDOLIMPO_USER')
+hdolimpo_user = os.getenv('HDO_USER')
 
 # Set up logging
 logging.basicConfig(filename="../app.log", level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -38,8 +38,8 @@ for cookie in cookies:
     driver.add_cookie(cookie)
 
 
-driver.get('https://hd-olimpo.club/users/{hdolimpo_user}')
-driver.get('https://hd-olimpo.club/users/{hdolimpo_user}')
+driver.get(f'https://hd-olimpo.club/users/{hdolimpo_user}')
+driver.get(f'https://hd-olimpo.club/users/{hdolimpo_user}')
 sleep(2)
 # Find all td elements with the text "Ratio"
 elements = driver.find_elements(By.XPATH, "//td[.='Ratio']")
